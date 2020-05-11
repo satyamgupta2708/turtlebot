@@ -425,7 +425,7 @@ void get_data::astar()
           
           {
           cout<<"51"<<endl;
-           map[current_node_row-1][current_node_col+1].move_cost = map[current_node_row][current_node_col].move_cost + 1;
+           map[current_node_row-1][current_node_col+1].move_cost = map[current_node_row][current_node_col].move_cost + 1.414;
            map[current_node_row-1][current_node_col+1].cost = cost;
            map[current_node_row-1][current_node_col+1].heur_cost = heuristics(current_node_row-1,current_node_col+1,goal_row,goal_col);
            map[current_node_row-1][current_node_col+1].parent_node_row = current_node_row;
@@ -460,7 +460,7 @@ void get_data::astar()
           {
           
 cout<<"61"<<endl;
-          map[current_node_row-1][current_node_col-1].move_cost = map[current_node_row][current_node_col].move_cost + 1;
+          map[current_node_row-1][current_node_col-1].move_cost = map[current_node_row][current_node_col].move_cost + 1.414;
           map[current_node_row-1][current_node_col-1].cost = cost;
           map[current_node_row-1][current_node_col-1].heur_cost = heuristics(current_node_row-1,current_node_col-1,goal_row,goal_col);
           map[current_node_row-1][current_node_col-1].parent_node_row = current_node_row;
@@ -498,7 +498,7 @@ cout<<"61"<<endl;
           
           {
            cout<<"71"<<endl;
-          map[current_node_row +1][current_node_col+1].move_cost = map[current_node_row][current_node_col].move_cost + 1;
+          map[current_node_row +1][current_node_col+1].move_cost = map[current_node_row][current_node_col].move_cost + 1.414;
           map[current_node_row +1][current_node_col+1].cost = cost;
           map[current_node_row +1][current_node_col+1].heur_cost = heuristics(current_node_row+1,current_node_col+1,goal_row,goal_col);
           map[current_node_row +1][current_node_col+1].parent_node_row = current_node_row;
@@ -535,7 +535,7 @@ cout<<"61"<<endl;
           {
           
        cout<<"81"<<endl;
-          map[current_node_row +1][current_node_col-1].move_cost = map[current_node_row][current_node_col].move_cost + 1;
+          map[current_node_row +1][current_node_col-1].move_cost = map[current_node_row][current_node_col].move_cost + 1.414;
           map[current_node_row +1][current_node_col-1].cost = cost;
           map[current_node_row +1][current_node_col-1].heur_cost = heuristics(current_node_row+1,current_node_col-1,goal_row,goal_col);
           map[current_node_row +1][current_node_col-1].parent_node_row = current_node_row;
