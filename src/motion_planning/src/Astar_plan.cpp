@@ -364,7 +364,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 
        
-           if(cell_details_n[i-1][j].total_cost_n < total_cost || cell_details_n[i-1][j].total_cost_n == max())
+           if(total_cost< cell_details_n[i-1][j].total_cost_n  || cell_details_n[i-1][j].total_cost_n == max())
             {
 
                 update_cell_details(i-1, j, i, j,path_cost, heur_cost, total_cost);
@@ -386,7 +386,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i][j-1].total_cost_n < total_cost || cell_details_n[i][j-1].total_cost_n == max())
+           if(total_cost < cell_details_n[i][j-1].total_cost_n || cell_details_n[i][j-1].total_cost_n == max())
             {
 
                 update_cell_details(i, j-1, i, j,path_cost, heur_cost, total_cost);
@@ -410,7 +410,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i+1][j].total_cost_n < total_cost || cell_details_n[i+1][j].total_cost_n == max())
+           if(total_cost< cell_details_n[i+1][j].total_cost_n  || cell_details_n[i+1][j].total_cost_n == max())
             {
 
                 update_cell_details(i+1, j, i, j,path_cost, heur_cost, total_cost);
@@ -436,7 +436,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i][j+1].total_cost_n < total_cost || cell_details_n[i][j+1].total_cost_n == max())
+           if(total_cost< cell_details_n[i][j+1].total_cost_n  || cell_details_n[i][j+1].total_cost_n == max())
             {
 
                 update_cell_details(i, j+1, i, j, path_cost, heur_cost, total_cost);
@@ -459,7 +459,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i-1][j+1].total_cost_n < total_cost || cell_details_n[i-1][j+1].total_cost_n == max())
+           if(total_cost< cell_details_n[i-1][j+1].total_cost_n  || cell_details_n[i-1][j+1].total_cost_n == max())
             {
 
                 update_cell_details(i-1, j+1, i, j, path_cost, heur_cost, total_cost);
@@ -484,7 +484,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	// cout<< path_cost<<endl;
        
-           if(cell_details_n[i-1][j-1].total_cost_n < total_cost || cell_details_n[i-1][j-1].total_cost_n == max())
+           if(total_cost < cell_details_n[i-1][j-1].total_cost_n  || cell_details_n[i-1][j-1].total_cost_n == max())
             {
 
                 update_cell_details(i-1, j-1, i, j, path_cost, heur_cost, total_cost);
@@ -510,7 +510,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i+1][j+1].total_cost_n < total_cost || cell_details_n[i+1][j+1].total_cost_n == max())
+           if(total_cost < cell_details_n[i+1][j+1].total_cost_n  || cell_details_n[i+1][j+1].total_cost_n == max())
             {
 
                 update_cell_details(i+1, j+1, i, j, path_cost, heur_cost, total_cost);
@@ -537,7 +537,7 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
         
    	 //cout<< path_cost<<endl;
        
-           if(cell_details_n[i+1][j-1].total_cost_n < total_cost || cell_details_n[i+1][j-1].total_cost_n == max())
+           if(total_cost < cell_details_n[i+1][j-1].total_cost_n  || cell_details_n[i+1][j-1].total_cost_n == max())
             {
 
                 update_cell_details(i+1, j-1, i, j, path_cost, heur_cost, total_cost);
@@ -660,11 +660,16 @@ int main(int argc, char **argv)
    // float dest_x = 1.0;
    // float dest_y = 0;
 
+   float src_x = 1.0;		
+   float src_y = 0;
+   float dest_x = -1.7;
+   float dest_y = 0;
 
-   float src_x = -5;		
-   float src_y = -5;
-   float dest_x = 2;
-   float dest_y = 3;
+
+   // float src_x = -5;		
+   // float src_y = -5;
+   // float dest_x = 2;
+   // float dest_y = 3;
 
 
 
