@@ -579,41 +579,6 @@ cout << "\nThe vector elements are: ";
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-// void astar::path_traversed()
-// {
-//    int row = goal_row_n;
-//    int col = goal_col_n;
-
-//    counter = 0;
-//   while(!((row == cell_details_n[row][col].parent_row_n) && (col == cell_details_n[row][col].parent_col_n)))
-      
-//       {
-
-//             std::pair <int,int> x = make_pair(row,col);
-
-//             cout << x.first << " " << x.second<<" "<< counter <<endl;
-//             path_taken.push(x);
-
-//             mapc_n[row][col] = '|';
-
-//             row = cell_details_n[row][col].parent_row_n ;
-//             col = cell_details_n[row][col].parent_col_n ;
-
-            
-//             std::cout << cell_details_n[row][col].visited_n <<" "<<cell_details_n[row][col].total_cost_n <<std::endl;
-             
-//              counter ++;
-            
-//       }
-
-//       path_taken.push(make_pair(row,col));
-
-//       std::cout<< "exiting path traversed"<< std::endl;
-
-// }
-
-//------------------------------------------------------------------------------------------------------------------------------------------------
 void astar::path_traversed()
 {
    int row = goal_row_n;
