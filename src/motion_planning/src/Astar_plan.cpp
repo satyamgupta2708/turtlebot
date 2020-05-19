@@ -89,6 +89,8 @@ public:
      void path_traversed();
      void print_closed_list();
 
+     ~astar();
+
 
 
 };
@@ -117,12 +119,17 @@ astar::astar(float src_x,float src_y,float dest_x,float dest_y)
       }
   }
 
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
+  astar::~astar()
+  {
+    std::cout<< " object destroyed"<<std::endl;
 
+  }
+   
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
-   
 
-}
 
 auto astar::get_grid_pos(float x,float y)
 {
@@ -212,7 +219,7 @@ void astar::data()
   void astar::reshape(std::vector<int> x)
 {
 
-  std::cout<<" entered reshape successfully"<<std::endl;
+ 
   int inc = 0;
  
 mapc_n.resize(rows);
@@ -562,10 +569,11 @@ while(!((i == goal_row_n) && (j == goal_col_n)))
    open_list_n.erase(open_list_n.begin());
 }
  
-print_closed_list();
+//print_closed_list();
 path_traversed();
 
 }
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 void astar::print_closed_list()
 {
@@ -577,8 +585,10 @@ cout << "\nThe vector elements are: ";
 
 
 }
-//------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
 void astar::path_traversed()
 {
    int row = goal_row_n;
@@ -596,8 +606,11 @@ void astar::path_traversed()
 
             mapc_n[row][col] = '|';
 
-            row = cell_details_n[row][col].parent_row_n ;
-            col = cell_details_n[row][col].parent_col_n ;
+           int temp_row = cell_details_n[row][col].parent_row_n ;
+           int temp_col = cell_details_n[row][col].parent_col_n ;
+
+           row = temp_row;
+           col = temp_col;
 
             
             std::cout << cell_details_n[row][col].visited_n <<" "<<cell_details_n[row][col].total_cost_n <<std::endl;
@@ -625,16 +638,16 @@ int main(int argc, char **argv)
    // float dest_x = 1.0;
    // float dest_y = 0;
 
-   float src_x = 1.0;		
-   float src_y = 0;
-   float dest_x = -1.7;
-   float dest_y = 0;
+   // float src_x = 1.0;		
+   // float src_y = 0;
+   // float dest_x = -1.7;
+   // float dest_y = 0;
 
 
-   // float src_x = -5;		
-   // float src_y = -5;
-   // float dest_x = 2;
-   // float dest_y = 3;
+   float src_x = -5;		
+   float src_y = -5;
+   float dest_x = 2;
+   float dest_y = 3;
 
 
 
@@ -721,16 +734,21 @@ int main(int argc, char **argv)
 }
 
 
+  
+  
 
-for (int i=0; i<rows; i++)
-   {
-     cout << endl;
-    for (int j=0; j< columns; j++)
-    {
+
+
+
+// for (int i=0; i<rows; i++)
+//    {
+//      cout << endl;
+//     for (int j=0; j< columns; j++)
+//     {
        
-      cout<< find_path.mapc_n[i][j];
-    }
-  }
+//       cout<< find_path.mapc_n[i][j];
+//     }
+//   }
 
 return 0;
 
