@@ -1,2 +1,0 @@
-motion_planning
--DCATKIN_DEVEL_PREFIX=/home/satyam/turtlebot/devel -DCMAKE_INSTALL_PREFIX=/home/satyam/turtlebot/install -G Unix Makefiles
